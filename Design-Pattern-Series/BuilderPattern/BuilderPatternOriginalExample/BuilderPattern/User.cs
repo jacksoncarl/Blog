@@ -15,46 +15,31 @@ namespace BuilderPattern
             LastName = lastName;
         }
 
-        public User(string firstName, string lastName, Address address)
+        public User(string firstName, string lastName, Address address = null)
         {
             FirstName = firstName;
             LastName = lastName;
             Address = address;
         }
 
-        public User(string firstName, string lastName, Address address, DateTime dateOfBirth)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            Address = address;
-            DateOfBirth = dateOfBirth;
-        }
+        // ...more constructors here..
 
-        public User(string firstName, string lastName, Address address, DateTime dateOfBirth, string email)
+        public User(string firstName, string lastName, DateTime dateOfBirth, Address address = null, string email = "", string phoneNumber = "")
         {
             FirstName = firstName;
             LastName = lastName;
-            Address = address;
             DateOfBirth = dateOfBirth;
-            Email = email;
-        }
-
-        public User(string firstName, string lastName, Address address, DateTime dateOfBirth, string email, string phoneNumber)
-        {
-            FirstName = firstName;
-            LastName = lastName;
             Address = address;
-            DateOfBirth = dateOfBirth;
             Email = email;
             PhoneNumber = phoneNumber;
         }
 
-        public User(string firstName, string lastName, Address address, DateTime dateOfBirth, string email, string phoneNumber = "", string occupation = "")
+        public User(string firstName, string lastName, DateTime dateOfBirth, Address address = null, string email = "", string phoneNumber = "", string occupation = "")
         {
             FirstName = firstName;
             LastName = lastName;
-            Address = address;
             DateOfBirth = dateOfBirth;
+            Address = address;
             Email = email;
             PhoneNumber = phoneNumber;
             Occupation = occupation;

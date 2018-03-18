@@ -4,13 +4,13 @@ namespace BuilderPattern
 {
     public class User
     {
-        public User(string firstName, string lastName, DateTime dateOfBirth, Address address, string email, string phoneNumber, string occupation)
+        public User(string firstName, string lastName, DateTime dateOfBirth, string email = "", Address address = null, string phoneNumber = "", string occupation = "")
         {
             FirstName = firstName;
             LastName = lastName;
             DateOfBirth = dateOfBirth;
-            UserAddress = address;
             Email = email;
+            Address = address;
             PhoneNumber = phoneNumber;
             Occupation = occupation;
         }
@@ -19,7 +19,7 @@ namespace BuilderPattern
 
         public string LastName { get; }
 
-        public Address UserAddress { get; }
+        public Address Address { get; }
 
         public DateTime DateOfBirth { get; }
 

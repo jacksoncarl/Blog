@@ -7,8 +7,8 @@ namespace BuilderPattern
         static void Main()
         {
             User user = new UserBuilder()
-                .AddFirstName("carl")
-                .AddDateTime(DateTime.UtcNow);
+                .AddEmail("email@email.com")
+                .AddPhoneNumber("000000000");
 
             Console.WriteLine($"First name: {user.FirstName}");
             Console.WriteLine($"Last name: {user.LastName}");

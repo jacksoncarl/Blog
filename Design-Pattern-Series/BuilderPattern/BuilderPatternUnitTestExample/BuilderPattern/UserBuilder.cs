@@ -9,8 +9,8 @@ namespace BuilderPattern
         private Address _address = new Address("addressLine1", "addressLine2", "addressLine3", "town", "postcode");
         private DateTime _dateOfBirth = DateTime.UtcNow;
         private string _email = "email@test.com";
-        public string _phoneNumber = "00000000000";
-        public string _occupation = "software developer";
+        private string _phoneNumber = "00000000000";
+        private string _occupation = "software developer";
 
         public UserBuilder AddFirstName(string firstName)
         {
@@ -30,7 +30,7 @@ namespace BuilderPattern
             return this;
         }
 
-        public UserBuilder AddDateTime(DateTime dateTime)
+        public UserBuilder AddDateOfBirth(DateTime dateTime)
         {
             _dateOfBirth = dateTime;
             return this;
@@ -56,7 +56,7 @@ namespace BuilderPattern
 
         private User Build()
         {
-            return new User(_firstName, _lastName, _dateOfBirth, _address, _email, _phoneNumber, _occupation);
+            return new User(_firstName, _lastName, _dateOfBirth, _email, _address, _phoneNumber, _occupation);
         }
 
         public static implicit operator User(UserBuilder userBuilder)
