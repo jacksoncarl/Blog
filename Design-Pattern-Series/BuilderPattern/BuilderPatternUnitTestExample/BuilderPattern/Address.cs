@@ -2,11 +2,6 @@
 {
     public class Address
     {
-        public Address()
-        {
-            
-        }
-
         public Address(string addressLine1, string addressLine2, string addressLine3, string town, string postcode)
         {
             AddressLine1 = addressLine1;
